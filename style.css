@@ -1,0 +1,195 @@
+body {
+        font-family: poppins;
+        margin: 0;
+        background-color: #060f1f;
+        color: #dee9f8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      #container {
+        display: none;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      #question{
+        text-align: center;
+        text-wrap: balance;
+      }
+      #choices {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      #choices button{
+        border: none;
+        height: max-content;
+        border-radius: 10px;
+        font-family: poppins;
+padding: 10px;
+text-wrap:balance;
+      }
+      #choices button:hover{
+        background-color: #bcd73c;
+      }
+      #levelButtons{
+        display: flex;
+        gap: 20px;
+        
+      }
+      #random{
+        width: 100%;
+        padding: 10px;
+        font-family: poppins;
+        background: #dee9f8;
+        border: none;
+        border-radius: 10px;
+        font-size: 1.02rem;
+        color:#060f1f;
+        display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 10px;
+         cursor: pointer;
+      }
+      #random:hover{
+animation: back .5s infinite ease-in-out;
+      }
+
+      #levelButtons button{
+        width: 100px;
+        height: 40px;
+        background-color: #ff673d;
+        border: none;
+         border-radius: 10px;
+         color:#060f1f;
+         font-family: poppins;
+         transition: transform .3s ease;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 4px;
+         cursor: pointer;
+      }
+      #levelButtons button:nth-child(2){
+background-color:#8daee7;
+color: #060f1f;
+      }
+       #levelButtons button:nth-child(3){
+background-color:#bcd73c;
+color: #060f1f;
+      }
+      #levelButtons button:hover{
+        background-color:#c92e03;
+        color:#dee9f8;
+        transform: scale(1.1);
+      }
+      #levelButtons button:nth-child(2):hover{
+        background-color:#2660c6;
+      }
+      #levelButtons button:nth-child(3):hover{
+        background-color:#f9f920;
+        color: #060f1f;
+      }
+      h1{
+        text-align: center;
+      }
+      #difficulty{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #range{
+        -webkit-appearance: none;
+        cursor: pointer;
+      }
+      #range[type="range"]{
+        background-color: #8daee7;
+        width: 100px;
+        height:10px;
+        border-radius: 5px;
+      }
+      #range[type="range"]::-webkit-slider-thumb{
+       -webkit-appearance: none;
+       width: 10px;
+       background-color:#f1f3ff ;
+       height: 15px;
+       border-radius: 2px;
+      }
+      #range[type="range"]::-webkit-slider-thumb:hover{
+        
+        transform: scale(1.1);
+      }
+      #level-container{
+        padding: 5px;
+        text-align: center;
+      }
+      #score-board{
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        border: 1px solid #f1f3ff;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+       #score-board #scoreresult{
+        font-size: 2.5rem;
+       }
+       #action{
+         display: flex;
+        gap: 20px;
+       }
+       #action button{
+        width: 100px;
+        height: 40px;
+        background-color: #c39081;
+        border: none;
+         border-radius: 10px;
+         color:#060f1f;
+         font-family: poppins;
+         transition: transform .3s ease;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 4px;
+         cursor: pointer;
+       }
+       
+       #result {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+      }
+      #container #navbar{
+        position: absolute;
+        top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        gap: 100px;
+      }
+      #navbar #clock{
+display: flex;
+gap: 10px;
+align-items: center;
+      }
+      #rightside button{
+display: flex;
+gap: 5px;
+padding: 5px;
+align-items: center;
+cursor: pointer;
+background: transparent;
+color: #dee9f8;
+border: none;
+font-family: poppins;
+      }

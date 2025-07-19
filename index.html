@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini web quiz</title>
+     <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Kablammo|Sour Gummy|Atma|Poppins|Montserrat"
+    />
+    <script src="https://kit.fontawesome.com/9603c04a31.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="navbar">
+        <div id="clock"><i class="fa-regular fa-clock fa-xl" id="imgclock"></i><span id="time">30</span></div>
+        <div id="rightside">
+        <button type="button" id="back-home"><i class="fa-solid fa-circle-xmark fa-xl"></i><span>Quit</span></button>
+      </div>
+      </div>
+      <div id="question"></div>
+      <div id="choices"></div>
+    </div>
+   <div id="home">
+    <h1>Mini Web Quiz</h1>
+    <div id="difficulty">
+        <label for="">Choose the Difficulty level:</label>
+        <input type="range" min="0" max="2" id="range">
+    </div>
+     <br>
+    <div id="levelButtons">
+<button type="button" id="html"><i class="fa-brands fa-html5 fa-xl"></i><span>HTML</span></button>
+<button type="button" id="css"><i class="fa-brands fa-css3-alt fa-xl"></i><span>CSS</span></button>
+<button type="button" id="js"><i class="fa-brands fa-square-js fa-xl"></i><span>JS</span></button>
+    </div> 
+    <hr>
+    <button type="button" id="random"><i class="fa-solid fa-shuffle fa-beat"></i><span>Random</span></button>
+   </div>
+    <div id="result">
+      <div id="score-board">
+<span id="scoreresult"></span>
+      </div>
+      <div id="action">
+        <button type="button" id="back"><i class="fa-solid fa-house fa-xl"></i><span>Home</span></button>
+        <button type="button" id="again"><i class="fa-solid fa-rotate fa-spin-pulse fa-xl"></i><span>Replay</span></button>
+      </div>
+    </div>
+    <script src="script.js">
+    </script>
+  </body>
+</html>
