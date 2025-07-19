@@ -32,36 +32,39 @@ document.getElementById("container").style.display = "none";
             }, 1000);
              
         }
-       
         const range = Number(document.getElementById("range").value);
         document.getElementById("container").style.display = "flex";
         document.getElementById("question").textContent =
-          array[range][questioNum].question;
+          array[range][questioNum].question; //getting the question
         const optcont = document.getElementById("choices");
-        optcont.innerHTML = "";
+        optcont.innerHTML = "";//clearing out the before for the next choice
         for (let i = 0; i < 4; i++) {
           let newh = document.createElement("button");
           newh.id = choicesLet[i];
-          newh.classList.add("item");
+          newh.classList.add("item");//creating the button and giving it class and id
           newh.innerHTML = array[range][questioNum].options[i];
-          optcont.append(newh);
+          optcont.append(newh);//appending it
+          //click
           newh.addEventListener("click", function() {  
-        if (array[range][questioNum].answer===newh.id) {
-          counter++;
-        }
-        questioNum++;
-        contin(array);
+       //check if the chosen button's id is same as the correct answer from the array
+            if (array[range][questioNum].answer===newh.id) {
+          counter++;//if so increase player score
+        }  
+        questioNum++; //when any of the choices button clicked then increase the current question number
+        contin(array); //game continuation
           });
         }
       }
 function contin(array){
     const range = Number(document.getElementById("range").value);
 if (questioNum < array[range].length) {
-          start(array);
+          start(array);//game contiues until current question number is equal to number of questions(5 in this case)
         } else {
+          //hide container and then display results and score
           document.getElementById("container").style.display = "none";
           res.style.display = "flex";
-            scoreresult.innerText = `${counter}/5`; }
+            scoreresult.innerText = `${counter}/5`;
+          }
 }
 function continrandom(array){ if (questioNum < array.length ) { random(array); } else { document.getElementById("container").style.display = "none"; res.style.display = "flex"; if(counter<=1){ scoreresult.innerText = `${counter}/5`; } else if(counter<=3){ scoreresult.innerText = `${counter}/5`; } else if(counter<=5){ scoreresult.innerText = `${counter}/5`; } } }
 let arrays = [jsQuestions,cssQuestions,HtmlQuestions];
@@ -86,7 +89,7 @@ document.getElementById("container").style.display = "none";
             }, 1000);
              
         }
-    let newArray = [];
+    let newArray = [];//generating new array with 5 random questions from the 3 arrays
     for(let i=0;;i++){
         let a = Math.floor(Math.random()*3);
         let b = Math.floor(Math.random()*3);
@@ -103,7 +106,7 @@ document.getElementById("container").style.display = "none";
 function random(array) { document.getElementById("container").style.display = "flex"; document.getElementById("question").textContent = array[questioNum].question; const optcont = document.getElementById("choices"); optcont.innerHTML = ""; for (let i = 0; i < 4; i++) { let newh = document.createElement("button"); newh.id = choicesLet[i]; newh.innerHTML = array[questioNum].options[i]; optcont.append(newh); newh.addEventListener("click", function() { if (array[questioNum].answer===newh.id) { counter++; } questioNum++; continrandom(array); }); } }
      
 document.getElementById("css").addEventListener("click",function(){
-        reseting();
+        reseting();//when clicked resets value to 0(counter and questionum)
         start(cssQuestions);
         home.style.display="none";
         document.getElementById("again").addEventListener("click",function(){;
