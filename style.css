@@ -8,6 +8,9 @@ body {
         justify-content: center;
         height: 100vh;
       }
+      button{
+        outline: none;
+      }
       #container {
         display: none;
         flex-direction: column;
